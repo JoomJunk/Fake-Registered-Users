@@ -13,6 +13,11 @@ Changelog
 - -> Removed
 ! -> Note
 
+Version 1.1.0
++ Rewritten module helper
+# Fixed PHP error in helper class
+^ Major code simplification
+
 Version 1.0.3
 + Integrated Joomla update feature with 2.5/3.0 version
 + New Database commands in 2.5/3.0 version to allow for non-MYSQL databases to be supported
