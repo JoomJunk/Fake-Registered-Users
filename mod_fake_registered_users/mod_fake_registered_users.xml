@@ -8,7 +8,7 @@
 	<authorUrl>http://www.joomjunk.co.uk</authorUrl>
 	<version>1.1.0</version>
 	<license>http://www.gnu.org/licenses/gpl-3.0.html</license>
-	<description>JJFAKEREGISTEREDUSERSDESC</description>
+	<description>MOD_FAKE_REGISTERED_USERS_DESC</description>
 	
 	<files>
 		<filename module="mod_fake_registered_users">mod_fake_registered_users.php</filename>
@@ -29,18 +29,12 @@
 	<config>
 		<fields name="params">
 		<fieldset name="basic" label="Basic">
-			<field name="@spacer" type="spacer" default="&lt;div id=&quot;image_1&quot;  style=&quot;font-weight:normal;font-size:12px;color:#fff;padding:4px;margin:0;background:#666;&quot;&gt;Show fake or real amount?&lt;/div&gt;" label="" description="" />
-			<field name="reguser" type="radio" default="1" label="REGISTEREDUSERS" description="REGISTEREDUSERSDESC">
-				<option value="1">FAKE</option>
-				<option value="0">REAL</option>
+			<field name="reguser" type="radio" class="btn-group" default="1" label="MOD_FAKE_REGISTERED_USERS_TYPE" description="MOD_FAKE_REGISTERED_USERS_TYPE_DESC">
+				<option value="1">MOD_FAKE_REGISTERED_USERS_LABEL_FAKE</option>
+				<option value="0">MOD_FAKE_REGISTERED_USERS_LABEL_REAL</option>
 			</field>
-		
-			<field name="@spacer2" type="spacer" default="&lt;div id=&quot;image_1&quot;  style=&quot;font-weight:normal;font-size:12px;color:#fff;padding:4px;margin:0;background:#666;&quot;&gt;If you selected 'Fake', please type in a number below, which will be added on to the real amount of registered users&lt;/div&gt;" label="" description="" />
-		
-			<field name="increase" type="text" default="100" label="INCREASEBY" description="INCREASEBYDESC" />
-		
-			<field name="displaytitle" type="text" size="30" default="Registered Users:" label="REGLABEL" description="REGLABELDESC" />
-
+			<field name="increase" type="text" default="100" label="MOD_FAKE_REGISTERED_USERS_INCREASE_BY" description="MOD_FAKE_REGISTERED_USERS_INCREASE_BY_DESC" />	
+			<field name="displaytitle" type="text" size="30" default="Registered Users:" label="MOD_FAKE_REGISTERED_USERS_LABEL" description="MOD_FAKE_REGISTERED_USERS_LABEL_ESC" />
 			<field name="moduleclass_sfx" type="text" default="" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
 		</fieldset>
 		</fields>
