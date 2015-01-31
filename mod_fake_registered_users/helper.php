@@ -2,7 +2,7 @@
 /**
 * @package		JJ Fake Registered Users
 * @author		JoomJunk
-* @copyright	Copyright (C) 2011 - 2012 JoomJunk.
+* @copyright	Copyright (C) 2011 - 2015 JoomJunk.
 * @license		http://www.gnu.org/licenses/gpl-3.0.html
 */
 
