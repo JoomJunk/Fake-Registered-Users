@@ -11,51 +11,36 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 
 class ModFakeDataHelper
 {
-	public function getList($params)
+	/**
+	 * Gets the number of users with the given parameters
+	 *
+	 */
+	public function getNumber($displayFake, $increaseAmount)
 	{
 		$db = JFactory::getDbo();
 		$query = $db->getQuery(true);
 		$query->select('COUNT(id) AS count_users');
 		$query->from($db->quoteName('#__users'));
 		$db->setQuery($query);
+
+		// TODO: Check for a database error
 		$members = $db->loadResult();
 
-		$rows = array();
+		// Initialise the number of users to return
+		$number = 0;
 
-		$reguser 	= $params->get('reguser');
-		$increase 	= $params->get('increase');
-
-		$i = 0;
-
-		if ($reguser)
+		// If we have users returned then the number of users is that number
+		if ($members)
 		{
-			if ($members)
-			{
-				$rows[$i]        = new stdClass;
-				$rows[$i]->title = JText::_($params->get('displaytitle'));
-				$rows[$i]->data  = $members + $increase;
-				$i++;
-			}
-			else
-			{
-				echo '';
-			}
-		}
-		else
-		{
-			if ($members)
-			{
-				$rows[$i]        = new stdClass;
-				$rows[$i]->title = JText::_( $params->get( 'displaytitle' ) );
-				$rows[$i]->data  = $members;
-				$i++;
-			}
-			else
-			{
-				echo '';
-			}
+			$number = $members;
 		}
 
-		return $rows;
+		// If we need to display a faked amount add the number to increase on
+		if ($displayFake)
+		{
+			$number += $increaseAmount;
+		}
+
+		return $number;
 	}
 }

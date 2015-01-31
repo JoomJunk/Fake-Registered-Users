@@ -12,8 +12,10 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 // Include the syndicate functions only once
 require_once (dirname(__FILE__).'/helper.php');
 
-$reguser = $params->get( 'reguser' );
-$displaytitle = $params->get( 'displaytitle' );
+$displaytitle = JText::_($params->get('displaytitle', 'Registered Users:'));
+$reguser      = $params->get('reguser', 1);
+$increase     = $params->get('increase', 100);
 
-$list = ModFakeDataHelper::getList($params);
+$helper = new ModFakeDataHelper;
+$users = $helper->getNumber($reguser, $increase);
 require(JModuleHelper::getLayoutPath('mod_fake_registered_users'));
