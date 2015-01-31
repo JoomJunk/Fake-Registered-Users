@@ -32,6 +32,7 @@ class ModFakeDataHelper
 		
 			if ($members)
 			{
+				$rows[$i]        = new stdClass;
 				$rows[$i]->title = JText::_( $params->get( 'displaytitle' ) );
 				$rows[$i]->data  = $members + $increase;
 				$i++;
@@ -45,6 +46,7 @@ class ModFakeDataHelper
 		{
 			if ($members)
 			{
+				$rows[$i]        = new stdClass;
 				$rows[$i]->title = JText::_( $params->get( 'displaytitle' ) );
 				$rows[$i]->data  = $members;
 				$i++;
