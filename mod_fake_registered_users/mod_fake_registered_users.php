@@ -15,5 +15,5 @@ require_once (dirname(__FILE__).'/helper.php');
 $reguser = $params->get( 'reguser' );
 $displaytitle = $params->get( 'displaytitle' );
 
-$list = modFakeDataHelper::getList($params);
+$list = ModFakeDataHelper::getList($params);
 require(JModuleHelper::getLayoutPath('mod_fake_registered_users'));
