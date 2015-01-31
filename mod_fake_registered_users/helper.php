@@ -13,7 +13,7 @@ class ModFakeDataHelper
 {
 	public function getList($params)
 	{
-		$db = JFactory::getDBO();
+		$db = JFactory::getDbo();
 		$query = $db->getQuery(true);
 		$query->select('COUNT(id) AS count_users');
 		$query->from($db->quoteName('#__users'));
