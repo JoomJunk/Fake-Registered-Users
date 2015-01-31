@@ -19,21 +19,20 @@ class ModFakeDataHelper
 		$query->from($db->quoteName('#__users'));
 		$db->setQuery($query);
 		$members = $db->loadResult();
-			
+
 		$rows = array();
 
-		$reguser 	= $params->get( 'reguser' );
-		$increase 	= $params->get( 'increase' );
+		$reguser 	= $params->get('reguser');
+		$increase 	= $params->get('increase');
 
 		$i = 0;
 
 		if ($reguser)
-		{			
-		
+		{
 			if ($members)
 			{
 				$rows[$i]        = new stdClass;
-				$rows[$i]->title = JText::_( $params->get( 'displaytitle' ) );
+				$rows[$i]->title = JText::_($params->get('displaytitle'));
 				$rows[$i]->data  = $members + $increase;
 				$i++;
 			}
