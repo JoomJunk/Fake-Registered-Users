@@ -8,4 +8,4 @@
 
 // no direct access
 defined('_JEXEC') or die('Restricted access'); ?>
-<strong><?php echo $displaytitle; ?></strong>  <?php echo $users ?><br />
+<p><strong><?php echo $displaytitle; ?></strong>  <?php echo $users ?></p>
