@@ -40,8 +40,8 @@
 			<field name="increase" type="text" default="100" label="INCREASEBY" description="INCREASEBYDESC" />
 		
 			<field name="displaytitle" type="text" size="30" default="Registered Users:" label="REGLABEL" description="REGLABELDESC" />
-		
-			<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="fieldMODULECLASSSUFFIX" />	
+
+			<field name="moduleclass_sfx" type="text" default="" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
 		</fieldset>
 		</fields>
 	</config>
