@@ -20,7 +20,9 @@
 	<languages folder="language">
 		<language tag="en-GB">en-GB/en-GB.mod_fake_registered_users.ini</language>
 		<language tag="en-GB">en-GB/en-GB.mod_fake_registered_users.ini</language>
-    </languages>
+		<language tag="fr-FR">fr-FR/fr-FR.mod_fake_registered_users.ini</language>
+		<language tag="fr-FR">fr-FR/fr-FR.mod_fake_registered_users.ini</language>
+	</languages>
 	
 	<updateservers>
 		<server type="extension" name="JJ Fake Registered Users" priority="1">http://www.joomjunk.co.uk/updates/fakeregisteredusers_update.xml</server>
